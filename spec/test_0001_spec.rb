@@ -1,8 +1,6 @@
-describe "0001 tests" do
-  before do
-    @files = Dir.glob(File.join(File.dirname(__FILE__), "../programming_tests/0001/*")).map{|f| require(f)}
-  end
+require 'rails_helper'
 
+describe "0001 tests" do
   context "Transform1" do
     it "should equal the expected output" do
       s = '{first: "Stephen", last: "King", joined: ["first", "2015-07-26T16:06:41-07:00"]}'

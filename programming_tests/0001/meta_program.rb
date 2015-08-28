@@ -14,4 +14,8 @@ class MetaProgram
   def initialize(h)
     @h = h
   end
+
+  def method_missing(method_name)
+    @h["#{method_name}"]
+  end
 end
