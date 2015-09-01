@@ -20,6 +20,5 @@ class Transform1
   def to_hash
     j = @str.gsub(/\w+:\s/){|m| "\"#{m.chomp(": ")}\": "}
     ActiveSupport::JSON.decode(j).symbolize_keys
-    # JSON.parse(j, symbolize_names: true)
   end
 end
